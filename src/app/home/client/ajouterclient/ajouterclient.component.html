@@ -1,0 +1,102 @@
+<div id="main">
+
+    
+
+   
+
+
+    <section id="content_wrapper">
+
+        
+
+
+        <section id="content" class="table-layout animated fadeIn">
+
+            
+
+            <div class="chute chute-center">
+                <div class="allcp-form theme-primary mw1000 center-block pb175">
+
+                    <div class="panel">
+                        <form  [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                            <div class="panel-heading">
+                                <div class="panel-title">
+                                    Remplir le formulaire
+                                </div>
+                            </div>
+                            <div class="panel-body">
+                                <h6 class="mb20" id="spy1"></h6>
+                                <div class="section row mhn10">
+                                    <div class="col-md-6 ph10 mb5">
+                                        <label for="cin" class="field prepend-icon">
+                                            <input type="text" formControlName="cin" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.cin.errors }"
+                                                   placeholder="Ncin...">
+                                            <span class="field-icon">
+                                                <i class="fa fa-user"></i>
+                                            </span>
+                                        </label>
+                                        <div *ngIf="submitted && f.cin.errors" class="invalid-feedback">
+                                            <div *ngIf="f.cin.errors.required">N° cin is required</div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-md-6 ph10 mb5">
+                                        <label for="nom" class="field prepend-icon">
+                                            <input type="text" formControlName="nom" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.nom.errors }"
+                                                   placeholder="nom...">
+                                            <span class="field-icon">
+                                                <i class="fa fa-user"></i>
+                                            </span>
+                                        </label>
+                                        <div *ngIf="submitted && f.nom.errors" class="invalid-feedback">
+                                            <div *ngIf="f.nom.errors.required">firstname is required</div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-md-6 ph10 mb5">
+                                        <label for="prenom" class="field prepend-icon">
+                                            <input type="text" formControlName="prenom" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.prenom.errors }"
+                                                   placeholder="prenom...">
+                                            <span class="field-icon"><i class="fa fa-user"></i></span>
+                                        </label>
+                                        <div *ngIf="submitted && f.prenom.errors" class="invalid-feedback">
+                                            <div *ngIf="f.prenom.errors.required">lastname is required</div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-md-6 ph10 mb5">
+                                        <label for="numpermis" class="field prepend-icon">
+                                            <input type="text" formControlName="numpermis" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.numpermis.errors }"
+                                                   placeholder="N°permis...">
+                                            <span class="field-icon"><i class="fa fa-user"></i></span>
+                                        </label>
+                                        <div *ngIf="submitted && f.numpermis.errors" class="invalid-feedback">
+                                            <div *ngIf="f.numpermis.errors.required">N°permis is required</div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                
+                                
+                
+                            </div>
+
+                            <div class="panel-footer text-right">
+                                <button type="submit" class="btn btn-bordered btn-primary mb5"> Validate Form</button>
+                                <button type="reset" class="btn btn-bordered mb5"> Cancel</button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+    </section>
+</div>
+

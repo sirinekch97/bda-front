@@ -1,0 +1,112 @@
+<div id="main">
+
+    
+
+   
+
+
+    <section id="content_wrapper">
+
+        
+
+
+        <section id="content" class="table-layout animated fadeIn">
+
+            
+
+            <div class="chute chute-center">
+                <div class="allcp-form theme-primary mw1000 center-block pb175">
+
+                    <div class="panel">
+                        <form  [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                            <div class="panel-heading">
+                                <div class="panel-title">
+                                    Remplir Formulaire
+                                </div>
+                            </div>
+                            <div class="panel-body">
+                                <h6 class="mb20" id="spy1">Basic inputs</h6>
+                                <div class="section row mhn10">
+                                    <div class="col-md-6 ph10 mb5">
+                                        <label for="Numimmat" class="field prepend-icon">
+                                            <input type="text" formControlName="nom" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.Nimmat.errors }"
+                                                   placeholder="Num immat">
+                                           
+                                        </label>
+                                        <div *ngIf="submitted && f.Nimmat.errors" class="invalid-feedback">
+                                            <div *ngIf="f.Nimmat.errors.required">N°immat is required</div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-md-6 ph10 mb5">
+                                        <label for="marque" class="field prepend-icon">
+                                            <input type="text" formControlName="marque" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.marque.errors }"
+                                                   placeholder="Marque...">
+                                            
+                                        </label>
+                                        <div *ngIf="submitted && f.marque.errors" class="invalid-feedback">
+                                            <div *ngIf="f.marque.errors.required">marque is required</div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="section row mhn10">
+                                    <div class="col-md-6 ph10 mb5">
+                                        <label for="Modele" class="field prepend-icon">
+                                            <input type="text" formControlName="Modele" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.Modele.errors }"
+                                                   placeholder="Modèle...">
+                                            
+                                        </label>
+                                        <div *ngIf="submitted && f.Modele.errors" class="invalid-feedback">
+                                            <div *ngIf="f.Modele.errors.required">Modele is required</div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-md-6 ph10 mb5">
+                                        <label for="price" class="field prepend-icon">
+                                            <input type="text" formControlName="Modele" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.price.errors }"
+                                                   placeholder="prix...">
+                                            
+                                        </label>
+                                        <div *ngIf="submitted && f.price.errors" class="invalid-feedback">
+                                            <div *ngIf="f.price.errors.required">price is required</div>
+                                        </div>
+
+                                    </div>
+                                    
+                                </div>
+                                                             
+                                <div class="section">
+                                    <label for="datepicker1" class="field prepend-icon">
+                                    <input type="text" id="datepicker1" name="datepicker1" class="gui-input hasDatepicker" placeholder="Datepicker Popup">
+                                    <span class="field-icon">
+                                    <i class="fa fa-calendar"></i>
+                                    </span>
+                                    </label>
+                                    </div>
+
+                                          
+
+                               
+
+                            </div>
+
+                            <div class="panel-footer text-right">
+                                <button type="submit" class="btn btn-bordered btn-primary mb5"> Validate Form</button>
+                                <button type="reset" class="btn btn-bordered mb5"> Cancel</button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+    </section>
+</div>
+

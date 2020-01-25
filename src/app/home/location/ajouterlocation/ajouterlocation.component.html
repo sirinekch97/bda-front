@@ -1,0 +1,127 @@
+<div id="main">
+
+    
+
+   
+
+
+    <section id="content_wrapper">
+
+        
+
+
+        <section id="content" class="table-layout animated fadeIn">
+
+            
+
+            <div class="chute chute-center">
+                <div class="allcp-form theme-primary mw1000 center-block pb175">
+
+                    <div class="panel">
+                        <form  [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                            <div class="panel-heading">
+                                <div class="panel-title">
+                                    Remplir Formulaire
+                                </div>
+                            </div>
+                            <div class="panel-body">
+                                <h6 class="mb20" id="spy1">Basic inputs</h6>
+                                <div class="section row mhn10">
+                                    <div class="section">
+                                        <label for="datedeb" class="field prepend-icon">
+                                        <input type="text" id="datedeb" name="datedeb" class="gui-input hasDatepicker" placeholder="date deb">
+                                        <span class="field-icon">
+                                        <i class="fa fa-calendar"></i>
+                                        </span>
+                                        </label>
+                                        </div>
+                                        <div class="section">
+                                            <label for="datefin" class="field prepend-icon">
+                                            <input type="text" id="datefin" name="datefin" class="gui-input hasDatepicker" placeholder="date fin">
+                                            <span class="field-icon">
+                                            <i class="fa fa-calendar"></i>
+                                            </span>
+                                            </label>
+                                            </div>
+                                   
+                                            <div class="section">
+                                                <label for="dateacc" class="field prepend-icon">
+                                                <input type="text" id="dateacc" name="dateacc" class="gui-input hasDatepicker" placeholder="date accident">
+                                                <span class="field-icon">
+                                                <i class="fa fa-calendar"></i>
+                                                </span>
+                                                </label>
+                                            </div>
+                                </div>
+
+                               
+                                
+                            
+                                <div class="col-md-6 ph10 mb5">
+                                    <label for="cin" class="field prepend-icon">
+                                        <input type="text" formControlName="cin" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.cin.errors }"
+                                               placeholder="Ncin...">
+                                        <span class="field-icon">
+                                            <i class="fa fa-user"></i>
+                                        </span>
+                                    </label>
+                                    <div *ngIf="submitted && f.cin.errors" class="invalid-feedback">
+                                        <div *ngIf="f.cin.errors.required">N° cin is required</div>
+                                    </div>
+
+                                </div>   
+                                <div class="col-md-6 ph10 mb5">
+                                    <label for="Numimmat" class="field prepend-icon">
+                                        <input type="text" formControlName="nom" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.Nimmat.errors }"
+                                               placeholder="Num immat">
+                                       
+                                    </label>
+                                    <div *ngIf="submitted && f.Nimmat.errors" class="invalid-feedback">
+                                        <div *ngIf="f.Nimmat.errors.required">N°immat is required</div>
+                                    </div>
+
+                                </div>   
+
+                               
+                                <div class="col-md-6 ph10 mb5">
+                                    <label for="montant" class="field prepend-icon">
+                                        <input type="text" formControlName="montant" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.montant.errors }"
+                                               placeholder="montant...">
+                                        
+                                    </label>
+                                    <div *ngIf="submitted && f.montant.errors" class="invalid-feedback">
+                                        <div *ngIf="f.montant.errors.required">montant is required</div>
+                                    </div>
+    
+                                </div>
+                                <div class="col-md-6 ph10 mb5">
+                                    <label for="promotion" class="field prepend-icon">
+                                        <input type="text" formControlName="promotion" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.promotion.errors }"
+                                               placeholder="promotion...">
+                                        
+                                    </label>
+                                    <div *ngIf="submitted && f.promotion.errors" class="invalid-feedback">
+                                        <div *ngIf="f.promotion.errors.required">promotion is required</div>
+                                    </div>
+    
+                                </div>
+                                
+                            </div>
+                     
+
+                            <div class="panel-footer text-right">
+                                <button type="submit" class="btn btn-bordered btn-primary mb5"> Validate Form</button>
+                                <button type="reset" class="btn btn-bordered mb5"> Cancel</button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+    </section>
+</div>
+
