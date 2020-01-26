@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
 import { Service } from 'src/app/service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-ajoutervoiture',
@@ -9,10 +10,10 @@ import { Service } from 'src/app/service';
 })
 export class AjoutervoitureComponent implements OnInit {
 
-  constructor(private service: Service) { }
+  constructor(private service: Service, private router: Router) { }
 
   registerForm = new FormGroup({
-    nom: new FormControl(''),
+    Numimmat: new FormControl(''),
     marque: new FormControl(''),
     Modele: new FormControl(''),
     price: new FormControl(''),
@@ -21,7 +22,7 @@ export class AjoutervoitureComponent implements OnInit {
     nbCylindre: new FormControl(''),
     datepicker1: new FormControl('')
   });
-
+  submitted;
   id;
   ngOnInit() {
     this.service.getLastId().subscribe(data =>{
@@ -32,16 +33,19 @@ export class AjoutervoitureComponent implements OnInit {
     var voiture = {id: this.id,
                numImmatriculion: this.registerForm.value["Numimmat"],
                marque: this.registerForm.value["marque"],
-               modele: this.registerForm.value["modele"],
+               modele: this.registerForm.value["Modele"],
                prixLoc: this.registerForm.value["price"],
                numChassis: this.registerForm.value["numChassis"],
                puissanceFiscale: this.registerForm.value["puissanceFiscale"],
                nbCylindre: this.registerForm.value["nbCylindre"],
-               datepicker1: this.registerForm.value["datepicker1"]}
+               dateCirculation: this.registerForm.value["datepicker1"]}
     this.service.ajouterVoiture(voiture).subscribe(data =>{
       
     })
-    console.log(this.registerForm.value);
+
+    console.log(this.registerForm.value["datepicker1"])
+    this.router.navigate(['voitures/listevoitures']);
   }
+  
 
 }

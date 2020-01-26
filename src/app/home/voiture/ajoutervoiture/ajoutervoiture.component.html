@@ -67,8 +67,8 @@
                                     </div>
                                     <div class="col-md-6 ph10 mb5">
                                         <label for="price" class="field prepend-icon">
-                                            <input type="text" formControlName="prix" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.price.errors }"
-                                                   placeholder="prix...">
+                                            <input type="text" formControlName="price" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.price.errors }"
+                                                   placeholder="price...">
                                             
                                         </label>
                                         <div *ngIf="submitted && f.price.errors" class="invalid-feedback">
@@ -117,7 +117,7 @@
                                                              
                                 <div class="section">
                                     <label for="datepicker1" class="field prepend-icon">
-                                    <input type="text" id="datepicker1" name="datepicker1" class="gui-input hasDatepicker" placeholder="dateCirculation">
+                                    <input type="date" id="datepicker1" formControlName="datepicker1" name="datepicker1" class="gui-input hasDatepicker" placeholder="dateCirculation">
                                     <span class="field-icon">
                                     <i class="fa fa-calendar"></i>
                                     </span>

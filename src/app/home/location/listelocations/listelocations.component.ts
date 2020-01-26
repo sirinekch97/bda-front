@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Service } from 'src/app/service';
 
 @Component({
   selector: 'app-listelocations',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListelocationsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private service: Service) { }
 
+  list;
   ngOnInit() {
+    this.service.getLocations().subscribe(data =>{
+    this.list=data;
+    console.log(this.list)
+  })
+  }
+
+  delete(id){
+    this.service.deleteLocations(id).subscribe(data =>{
+    })
+    this.ngOnInit()
   }
 
 }

@@ -19,30 +19,26 @@
     <th class="">client</th>
     <th class="">montant </th>
     <th class="">promotion </th>
-    <th class="">date accident</th>
+    <!--<th class="">date accident</th>-->
     <th class="">action</th>
     </tr>
     </thead>
     <tbody>
-    <tr >
+    <tr *ngFor="let i of list">
     <td class="text-center">
     <label class="option block mn">
     <input type="checkbox" name="i" value="FR">
     <span class="checkbox mn"></span>
     </label>
     </td>
-    <td class="w100">
+    <td class="w100">{{i.date_deb}}
     </td>
-    <td class=""></td>
-    <td class=""></td>
-    <td class=""></td>
-    <td class=""></td>
-    <td class=""></td>
-    <td class=""></td>
-    <td class=""></td>
-
-
-    <td></td>
+    <td class="">{{i.date_fin}}</td>
+    <td class="">{{i.voiture.numImmatriculion}}</td>
+    <td class="">{{i.client.nom}}</td>
+    <td class="">{{i.montant}}</td>
+    <td class="">{{i.promotion}}</td>
+    <td><button  (click)="delete(i.id)"><i class="fa fa-trash"></i></button></td>
     </tr>
 
     </tbody>

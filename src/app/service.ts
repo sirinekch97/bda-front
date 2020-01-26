@@ -40,4 +40,24 @@ export class Service {
   ajouterClient(client): Observable<any> {
     return this.http.post<any>(this.Url2+"/add",client)
   }
+  getLastIdClient(): Observable<any>{
+    return this.http.get<any>(this.Url2+"/lastId")
+  }
+  /************************************* */
+  Url3="http://localhost:8080/location";
+
+  getLocations(): Observable<any> {
+    return this.http.get<any>(this.Url3+"/all")
+  }
+
+  deleteLocations (id) : Observable<any> {
+    return this.http.delete<any>(this.Url3+"/delete/"+id)
+  }
+
+  ajouterLocation(Numimmat,cin,location): Observable<any> {
+    return this.http.post<any>(this.Url3+"/add/"+Numimmat+"/"+cin,location)
+  }
+  getLastIdLocation(): Observable<any>{
+    return this.http.get<any>(this.Url3+"/lastId")
+  }
 }
