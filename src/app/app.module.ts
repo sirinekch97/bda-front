@@ -9,7 +9,7 @@ import { HeaderComponent } from './Home/header/header.component';
 import { SidebarComponent } from './Home/sidebar/sidebar.component';
 import { LayoutComponent } from './Home/layout/layout.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +23,8 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

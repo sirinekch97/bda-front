@@ -21,20 +21,20 @@
     </tr>
     </thead>
     <tbody>
-    <tr >
+    <tr *ngFor="let i of list">
     <td class="text-center">
     <label class="option block mn">
     <input type="checkbox" name="i" value="FR">
     <span class="checkbox mn"></span>
     </label>
     </td>
-    <td class="w100">
+    <td class="w100">{{i.numImmatriculion}}
     </td>
-    <td class=""></td>
-    <td class=""></td>
-    <td class=""></td>
-    <td class=""></td>
-    <td></td>
+    <td class="">{{i.marque}}</td>
+    <td class="">{{i.modele}}</td>
+    <td class="">{{i.dateCirculation}}</td>
+    <td class="">{{i.prixLoc}}</td>
+    <td><button  (click)="delete(i.id)"><i class="fa fa-trash"></i></button></td>
     </tr>
 
     </tbody>
