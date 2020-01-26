@@ -7,13 +7,12 @@
     <i class="imoon imoon-users2"></i>
     </div>
     <div class="col-xs-7 pl35 text-center">
-    <h2 class="">6089</h2>
-    <h6 class="text-muted">nombre des clients</h6>
+    <h2 class="">{{nbclient}}</h2>
+    <h6 class="text-muted">clients</h6>
     </div>
     <div class="col-sm-12">
     <div class="info-block-stat">
-    <span>Last Week’s Users</span>
-    <span>2096</span>
+    <span>nombre des clients</span>
     </div>
     </div>
     </div>
@@ -112,13 +111,12 @@
                         <i class="fa fa-money"></i>
                         </div>
                         <div class="col-xs-7 pl35 text-center">
-                        <h2 class="">7509</h2>
-                        <h6 class="text-muted">Nombre des locations</h6>
-                        </div>
-                        <div class="col-sm-12">
-                        <div class="info-block-stat">
-                        <span>Last Week’s Profit</span>
-                        <span>4153</span>
+                        <h2 class="">{{nblocation}}</h2>
+                        <h6 class="text-muted">locations</h6>
+                    </div>
+                    <div class="col-sm-12">
+                    <div class="info-block-stat">
+                    <span>nombre des locations</span>
                         </div>
                         </div>
                         </div>
@@ -133,13 +131,12 @@
                             <i class="fa fa-automobile"></i>
                             </div>
                             <div class="col-xs-7 pl35 text-center">
-                            <h2 class="">186</h2>
-                            <h6 class="text-muted">nombre des voitures</h6>
-                            </div>
-                            <div class="col-sm-12">
-                            <div class="info-block-stat">
-                            <span></span>
-                            <span></span>
+                            <h2 class="">{{nbvoiture}}</h2>
+                            <h6 class="text-muted">voitures</h6>
+                        </div>
+                        <div class="col-sm-12">
+                        <div class="info-block-stat">
+                        <span>nombre des voitures</span>
                             </div>
                             </div>
                              </div>
@@ -175,12 +172,15 @@
                                     <i class="fa fa-automobile"></i>
                                     </div>
                                     <div class="col-xs-7 pl35 text-center">
-                                    <h2 class="">186</h2>
-                                    <h6 class="text-muted">voiture</h6>
+                                        <h6 class="text-muted">marque: {{MaxLouee.voiture.marque}}</h6>
+                                        <br>
+                                        <h6 class="text-muted">date deb:{{MaxLouee.date_deb}}</h6>
+                                        <h6 class="text-muted">date fin: {{MaxLouee.date_fin}}</h6>
+                                        
                                     </div>
                                     <div class="col-sm-12">
                                     <div class="info-block-stat">
-                                    <span>la plus louée p/p nb loc et nb jour</span>
+                                    <span>la plus louée % nb jour</span>
                                     <span></span>
                                     </div>
                                     </div>
@@ -195,13 +195,17 @@
                                         <div class="col-xs-5 ph10 text-center">
                                         <i class="fa fa-automobile"></i>
                                         </div>
-                                        <div class="col-xs-7 pl35 text-center">
-                                        <h2 class="">186</h2>
-                                        <h6 class="text-muted">voiture</h6>
+                                       
+                                            <div class="col-xs-7 pl35 text-center">
+                                                <br>
+                                               <h6 class="text-muted">modèle : {{rentableVoiture.marque}}</h6>
+                                                <h6 class="text-muted">marque : {{rentableVoiture.modele}}</h6>
+                                                <h6 class="text-muted">prix: {{rentableVoiture.prixLoc}}</h6>
+                                                                                                   
                                         </div>
                                         <div class="col-sm-12">
                                         <div class="info-block-stat">
-                                        <span>la plus rentable</span>
+                                        <span>voiture la plus rentable</span>
                                         <span></span>
                                         </div>
                                         </div>
@@ -259,12 +263,14 @@
                                                     <i class="fa fa-automobile"></i>
                                                     </div>
                                                     <div class="col-xs-7 pl35 text-center">
-                                                    <h2 class="">186</h2>
-                                                    <h6 class="text-muted">voiture</h6>
+                                                        <h6 class="text-muted">modèle : {{puissanteVoiture.marque}}</h6>
+                                                        <h6 class="text-muted">marque : {{puissanteVoiture.modele}}</h6>
+                                                        <br>
+                                                        <h6 class="text-muted">puissance : {{puissanteVoiture.puissanceFiscale}}</h6>
                                                     </div>
                                                     <div class="col-sm-12">
                                                     <div class="info-block-stat">
-                                                    <span>la plus louée puissante</span>
+                                                    <span>voiture plus puissante</span>
                                                     <span></span>
                                                     </div>
                                                     </div>

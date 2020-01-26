@@ -26,12 +26,27 @@ export class Service {
   getLastId(): Observable<any>{
     return this.http.get<any>(this.Url+"/lastId")
   }
+  getNbVoitures(): Observable<any> {
+    return this.http.get<any>(this.Url+"/nombreVoiture")
+  }
+  
+  getPuissanteVoiture(): Observable<any> {
+    return this.http.get<any>(this.Url+"/voiturePuissante")
+  }
+  getRentableVoiture(): Observable<any> {
+    return this.http.get<any>(this.Url+"/voitureRentable")
+  }
+ 
   /************************************* */
   Url2="http://localhost:8080/client";
 
   getClients(): Observable<any> {
     return this.http.get<any>(this.Url2+"/all")
   }
+  getNbClients(): Observable<any> {
+    return this.http.get<any>(this.Url2+"/nombreClient")
+  }
+  
 
   deleteClient (id) : Observable<any> {
     return this.http.delete<any>(this.Url2+"/delete/"+id)
@@ -40,4 +55,16 @@ export class Service {
   ajouterClient(client): Observable<any> {
     return this.http.post<any>(this.Url2+"/add",client)
   }
+  /************************************* */
+  Url3="http://localhost:8080/location";
+
+  getNbLocations(): Observable<any> {
+    return this.http.get<any>(this.Url3+"/nombreLocation")
+  }
+  getLongDuree(): Observable<any> {
+    return this.http.get<any>(this.Url3+"/longDuree")
+  }
+  
+
+  
 }
