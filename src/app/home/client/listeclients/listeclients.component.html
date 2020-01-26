@@ -12,31 +12,32 @@
     <thead>
     <tr class="bg-light">
     <th class="text-center"></th>
-    <th class="">pic</th>
+    
     <th class="">CIN</th>
     <th class="">Nom</th>
     <th class="">Prenom</th>
     <th class="">N°permis</th>
-    <th class="">Tel</th>
+    <th class="">date naissance</th>
+    <th class="">Adresse</th>
     <th class="text-right">Action</th>
     </tr>
     </thead>
     <tbody>
-    <tr>
+    <tr *ngFor="let i of list">
     <td class="text-center">
     <label class="option block mn">
     <input type="checkbox" name="i" value="FR">
     <span class="checkbox mn"></span>
     </label>
     </td>
-    <td class="w100">
+    <td class="w100">{{i.cin}}
     </td>
-    <td class=""></td>
-    <td class=""></td>
-    <td class=""></td>
-    <td class=""></td>
-    <td class=""></td>
-    <td></td>
+    <td class="">{{i.nom}}</td>
+    <td class="">{{i.prenom}}</td>
+    <td class="">{{i.numPermis}}</td>
+    <td class="">{{i.dateNaissance}}</td>
+    <td class="">{{i.adresse}}</td>
+    <td><button  (click)="delete(i.id)"><i class="fa fa-trash"></i></button></td>
     </tr>
 
     </tbody>

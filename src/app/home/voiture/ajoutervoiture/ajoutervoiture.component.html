@@ -29,7 +29,7 @@
                                 <div class="section row mhn10">
                                     <div class="col-md-6 ph10 mb5">
                                         <label for="Numimmat" class="field prepend-icon">
-                                            <input type="text" formControlName="nom" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.Nimmat.errors }"
+                                            <input type="text" formControlName="Numimmat" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.Nimmat.errors }"
                                                    placeholder="Num immat">
                                            
                                         </label>
@@ -67,7 +67,7 @@
                                     </div>
                                     <div class="col-md-6 ph10 mb5">
                                         <label for="price" class="field prepend-icon">
-                                            <input type="text" formControlName="Modele" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.price.errors }"
+                                            <input type="text" formControlName="prix" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.price.errors }"
                                                    placeholder="prix...">
                                             
                                         </label>
@@ -76,12 +76,48 @@
                                         </div>
 
                                     </div>
+
+                                    <div class="col-md-6 ph10 mb5">
+                                        <label for="numChassis" class="field prepend-icon">
+                                            <input type="text" formControlName="numChassis" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.numChassis.errors }"
+                                                   placeholder="numChassis...">
+                                            
+                                        </label>
+                                        <div *ngIf="submitted && f.numChassis.errors" class="invalid-feedback">
+                                            <div *ngIf="f.numChassis.errors.required">numChassis is required</div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-md-6 ph10 mb5">
+                                        <label for="puissanceFiscale" class="field prepend-icon">
+                                            <input type="text" formControlName="puissanceFiscale" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.puissanceFiscale.errors }"
+                                                   placeholder="puissanceFiscale...">
+                                            
+                                        </label>
+                                        <div *ngIf="submitted && f.puissanceFiscale.errors" class="invalid-feedback">
+                                            <div *ngIf="f.puissanceFiscale.errors.required">price is required</div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-md-6 ph10 mb5">
+                                        <label for="nbCylindre" class="field prepend-icon">
+                                            <input type="text" formControlName="nbCylindre" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.nbCylindre.errors }"
+                                                   placeholder="nbCylindre...">
+                                            
+                                        </label>
+                                        <div *ngIf="submitted && f.nbCylindre.errors" class="invalid-feedback">
+                                            <div *ngIf="f.nbCylindre.errors.required">price is required</div>
+                                        </div>
+
+                                    </div>
                                     
                                 </div>
                                                              
                                 <div class="section">
                                     <label for="datepicker1" class="field prepend-icon">
-                                    <input type="text" id="datepicker1" name="datepicker1" class="gui-input hasDatepicker" placeholder="Datepicker Popup">
+                                    <input type="text" id="datepicker1" name="datepicker1" class="gui-input hasDatepicker" placeholder="dateCirculation">
                                     <span class="field-icon">
                                     <i class="fa fa-calendar"></i>
                                     </span>

@@ -77,6 +77,34 @@
 
                                     </div>
 
+                                    <div class="col-md-6 ph10 mb5">
+                                        <label for="nom" class="field prepend-icon">
+                                            <input type="text" formControlName="dateNaissance" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.dateNaissance.errors }"
+                                                   placeholder="dateNaissance...">
+                                            <span class="field-icon">
+                                                <i class="fa fa-user"></i>
+                                            </span>
+                                        </label>
+                                        <div *ngIf="submitted && f.dateNaissance.errors" class="invalid-feedback">
+                                            <div *ngIf="f.dateNaissance.errors.required">dateNaissance is required</div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-md-6 ph10 mb5">
+                                        <label for="nom" class="field prepend-icon">
+                                            <input type="text" formControlName="adresse" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.adresse.errors }"
+                                                   placeholder="adresse...">
+                                            <span class="field-icon">
+                                                <i class="fa fa-user"></i>
+                                            </span>
+                                        </label>
+                                        <div *ngIf="submitted && f.adresse.errors" class="invalid-feedback">
+                                            <div *ngIf="f.adresse.errors.required">adresse is required</div>
+                                        </div>
+
+                                    </div>
+
                                 </div>
 
                                 
