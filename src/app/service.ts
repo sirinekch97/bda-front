@@ -89,8 +89,17 @@ export class Service {
   }
   getLongDuree(): Observable<any> {
     return this.http.get<any>(this.Url3+"/longDuree")
+  } 
+  getMaxVoitureParLoc(): Observable<any> {
+    return this.http.get<any>(this.Url3+"/maxLocVoiture")
+  }  
+  getMaxClientFidele(): Observable<any> {
+    return this.http.get<any>(this.Url3+"/maxClientFidele")
   }
-  
+  getMaxDureeLoc(): Observable<any> {
+    return this.http.get<any>(this.Url3+"/maxDureeLoc")
+  }
+ 
 
   
 }

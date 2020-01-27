@@ -16,6 +16,9 @@ export class ListebilanComponent implements OnInit {
   puissanteVoiture;
   rentableVoiture;  
   MaxLouee;
+  MaxClientfidele;
+  getMaxDureeLoc;
+  MaxLoueeParLoc;
   ngOnInit() {
     this.service.getNbClients().subscribe(data =>{
     this.nbclient=data;
@@ -35,8 +38,19 @@ export class ListebilanComponent implements OnInit {
   this.service.getLongDuree().subscribe(data =>{
     this.MaxLouee=data;
   })
-  
-  
+  this.service. getMaxVoitureParLoc().subscribe(data =>{
+
+    this.MaxLoueeParLoc=data;
+  })  
+  this.service. getMaxClientFidele().subscribe(data =>{
+
+    this.MaxClientfidele=data;
+  })
+  this.service.  getMaxDureeLoc().subscribe(data =>{
+
+    this. getMaxDureeLoc=data;
+  })
+ 
   }
 
 }
