@@ -37,7 +37,10 @@
     <td class="">{{i.numPermis}}</td>
     <td class="">{{i.dateNaissance}}</td>
     <td class="">{{i.adresse}}</td>
-    <td><button  (click)="delete(i.id)"><i class="fa fa-trash"></i></button></td>
+    <td>
+        <button  (click)="delete(i.id)"><i class="fa fa-trash"></i></button>
+        <button  (click)="update(i.id)"><i class="fa fa-refresh"></i></button>
+    </td>
     </tr>
 
     </tbody>

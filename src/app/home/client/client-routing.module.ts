@@ -6,7 +6,10 @@ import {AjouterclientComponent} from './ajouterclient/ajouterclient.component'
 
 
 
-const routes: Routes = [{path:'listeclients',component:ListeclientsComponent},{path:'ajouterclient',component:AjouterclientComponent}];
+const routes: Routes = [{path:'listeclients',component:ListeclientsComponent},
+                        {path:'ajouterclient',component:AjouterclientComponent},
+                        {path:'modifierclient/:id',component:AjouterclientComponent}
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

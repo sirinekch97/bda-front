@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Service } from 'src/app/service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-listeclients',
@@ -8,7 +9,7 @@ import { Service } from 'src/app/service';
 })
 export class ListeclientsComponent implements OnInit {
 
-  constructor(private service: Service) { }
+  constructor(private service: Service,private router: Router) { }
 
   list;
   ngOnInit() {
@@ -22,6 +23,10 @@ export class ListeclientsComponent implements OnInit {
     this.service.deleteClient(id).subscribe(data =>{
     })
     this.ngOnInit()
+  }
+
+  update(id){
+    this.router.navigate(['/clients/modifierclient',id])
   }
 
 }

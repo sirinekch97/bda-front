@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Service } from 'src/app/service';
 import { Observable } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-listevoiture',
@@ -9,7 +10,7 @@ import { Observable } from 'rxjs';
 })
 export class ListeVoitureComponent implements OnInit {
 
-  constructor(private service: Service) { }
+  constructor(private service: Service,private router: Router) { }
 
   list;
   ngOnInit() {
@@ -25,6 +26,10 @@ export class ListeVoitureComponent implements OnInit {
       console.log("13")
     })
     this.ngOnInit()
+  }
+
+  update(id){
+    this.router.navigate(['/voitures/modifiervoiture',id])
   }
 
 }

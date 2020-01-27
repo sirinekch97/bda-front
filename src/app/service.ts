@@ -15,6 +15,10 @@ export class Service {
     return this.http.get<any>(this.Url+"/all")
   }
 
+  getVoitureById(id): Observable<any> {
+    return this.http.get<any>(this.Url+"/"+id)
+  }
+  
   deleteVoiture (id) : Observable<any> {
     return this.http.delete<any>(this.Url+"/delete/"+id)
   }
@@ -43,6 +47,11 @@ export class Service {
   getClients(): Observable<any> {
     return this.http.get<any>(this.Url2+"/all")
   }
+
+  getClientById(id): Observable<any> {
+    return this.http.get<any>(this.Url2+"/"+id)
+  }
+
   getNbClients(): Observable<any> {
     return this.http.get<any>(this.Url2+"/nombreClient")
   }
